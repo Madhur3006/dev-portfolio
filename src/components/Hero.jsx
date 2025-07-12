@@ -1,6 +1,6 @@
 import { HERO_CONTENT } from "../constants";
 import { motion } from "framer-motion";
-import profilePic from "../assets/image.jpg";
+import profilePic from "../assets/profilePhoto1.jpeg";
 import Typewriter from "typewriter-effect";
 
 const container = (delay) => ({
@@ -26,7 +26,7 @@ const Hero = ({ isDarkMode }) => {
                 isDarkMode ? "text-neutral-800" : ""
               }`}
             >
-              Swapnil Awasthi 
+              Madhur Mangal 
             </motion.h1>
             <motion.span
               variants={container(0.5)}
