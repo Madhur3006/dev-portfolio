@@ -5,39 +5,36 @@ import project3 from "../assets/projects/project3.png";
 
 export const EXPERIENCES = [
   {
-    year: "Nov 2024 - Present",
-    role: "Software Engineer Intern",
-    company: "Joveo",
+    year: "July 2023 - Present",
+    role: "Software Engineer",
+    company: "CommerceIQ",
     description: [
-      `Collaborated with the platform team to design and implement an admin tool in React, enabling the internal team to efficiently assign permissions out of 688 available options, streamlining administrative tasks and improving workflow.`,
-      `Resolved more than 30 issues in the company’s legacy product, MOJO Pro, built with Angular. Delivered fixes to improve stability and functionality, enhancing user experience and reducing technical debt.`,
-      `Contributed to the development of the Easy Apply feature, simplifying the job application process for end users.`,
+      `Implemented and delivered full end-to-end solutions using Vue.js, integration with backend systems, and final deployment`,
+      `Conducted code reviews and provided constructive feedback on pull requests to ensure code quality, adherence to best practices, and maintainability. Documented key features, processes, and configurations where needed to ensure clarity and ease of future development and maintenance`,
+      `Received recognition and an award for the swift delivery of a product, instrumental in establishing a partnership with Walmart. The success of this project led to CommerceIQ’s official designation as partners for advertisement tech platforms.`
     ],
-    technologies: ["Angular", "SCSS", "Angular Material", "React JS", "Javascript", "Typescript"],
+    technologies: ["React", "Vue", "SCSS", "Javascript", "Typescript", "Node.js", "Firebase", "AWS"],
   },
   {
-    year: "Sept 2023 - Nov 2024",
-    role: "Software Engineer",
-    company: "Abacus Desk IT Solutions",
+    year: "Feb 2022 - June 2023",
+    role: "Associate Software Engineer",
+    company: "Capgemini Engineering",
     description: [
-      `Spearheaded the development and maintenance of CRM tools over 20 projects using Angular, demonstrating proficiency in frontend development and enabling effective client relationship management`,
-      `Utilized SCSS and Angular Material to design and implement diverse components, ensuring the creation of visually appealing and responsive user interfaces tailored to project requirements`,
+      `Collaborated with a cross-functional team to develop and maintain IBM Spectrum Scale GUI, a cutting-edge web application for managing file and object storage.`,
+      `Engineered a comprehensive User Interface overhaul, integrating FluentUI library and transitioning 70% of the codebase from Dojo to React.js for enhanced functionality and maintainability.`,
       `Played a pivotal role in fostering collaboration among cross-functional teams, facilitating seamless transitions of new features and updates into existing projects to meet project deadlines and objectives`,
       `Acted as a primary liaison with clients, effectively gathering and analyzing product requirements and feedback to drive feature development and enhance product functionality and usability`,
       `Engineered a robust progress bar feature, empowering users to download extensive datasets in manageable chunks, thereby optimizing performance and user experience`,
-      `Led the successful migration of an application from Ionic to React Native, leveraging advanced skills in both frameworks to enhance app performance, scalability, and user engagement`,
-      `Developed and implemented user-engaging dashboards in React Native, delivering intuitive data visualization solutions that enhanced user interaction and facilitated data-driven decision-making`,
-      `Innovatively designed an Order module with integrated product recommendation capabilities, resulting in a notable 15% increase in the total amount per order through strategic upselling and personalized user experiences`,
     ],
-    technologies: ["Angular", "SCSS", "Ionic" , "Angular Material", "React Native", "Javascript", "Typescript"],
+    technologies: ["React", "SCSS", "Ionic", "React Native", "Javascript", "Typescript"],
   },
   {
-    year: "Aug 2023 - Sept 2023",
-    role: "Software Engineer Intern",
-    company: "NEETPrep GoodEd Technologies Private Limited",
+    year: "Aug 2022 - Jan 2023",
+    role: "Development Intern",
+    company: "Dataweave Technologies",
     description: [
-      `Developed dynamic, reusable components for product pages using React and CSS, enhancing UI efficiency and consistency`,
-      `Expertly crafted HTML emails with pre-2000 CSS, achieving responsive and visually appealing layouts without relying on CSS Grid or Flexbox`,
+      'Collaborated closely with UX designers and backend developers to translate requirements and wireframes into functional and visually appealing user interfaces.',
+      `Expertly crafted HTML emails with pre-2000 CSS, achieving responsive and visually appealing layouts without relying on CSS Grid or Flexbox.`,
       `Automated email delivery utilizing AWS SES, streamlining communication processes`
     ],
     technologies: ["React", "CSS", "HTML", "AWS", "Javascript"],
