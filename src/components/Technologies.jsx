@@ -1,5 +1,5 @@
 import { RiReactjsLine } from "react-icons/ri";
-import { FaAngular } from "react-icons/fa";
+import { FaVuejs } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
 import { FaSass } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
@@ -55,7 +55,7 @@ const Technologies = ({ isDarkMode }) => {
           animate="animate"
           className="rounded-2xl border-4 border-neutral-800 p-4"
         >
-          <FaAngular className="text-7xl text-red-700" />
+          <FaVuejs className="text-7xl text-red-700" />
         </motion.div>
         <motion.div
           variants={iconVariants(5)}

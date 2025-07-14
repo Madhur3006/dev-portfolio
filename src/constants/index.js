@@ -45,34 +45,34 @@ export const EXPERIENCES = [
 ];
 
 export const NAVLINKS = {
-  github: "https://github.com/swapnilawasthi-dev",
-  linkedIn: "https://www.linkedin.com/in/swapnil-awasthi-710a5a168/",
-  x: "https://twitter.com/_swapnilawasthi",
+  github: "https://github.com/Madhur3006",
+  linkedIn: "linkedin.com/in/madhur-mangal-a42b4821a",
+  x: "https://x.com/madhurmangal4?s=11",
 };
 
 
-export const HERO_CONTENT = `Software Engineer with about a year of experience in Javascript and its frameworks, translating user stories and wireframes into high quality reusable code, delivering seamless and high-performance user experiences. Adept at consistently updating skills with emerging technologies while maintaining a strong foundation in data structures and algorithms.`;
+export const HERO_CONTENT = `Software Engineer with about 3 years of experience in Javascript and its frameworks, translating user stories and wireframes into high quality reusable code, delivering seamless and high-performance user experiences. Adept at consistently updating skills with emerging technologies while maintaining a strong foundation in data structures and algorithms.`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile software engineer with a passion for creating efficient and user-friendly web applications. With 1 year of professional experience, I have worked with a variety of technologies, including React, React Native, Ionic, Angular and Firebase. My journey in software development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. In addition to my professional pursuits, I am an avid traveler, finding joy in exploring new cultures and destinations. Traveling not only broadens my perspective but also fuels my creativity by exposing me to diverse experiences and environments. Alongside my adventures, I indulge in the world of literature, spending my free time immersed in books across various genres. Reading not only enriches my mind but also nurtures critical thinking and continuous personal growth.`;
+export const ABOUT_TEXT = `I am a dedicated and versatile software engineer with a passion for creating efficient and user-friendly web applications. With 3 years of professional experience, I have worked with a variety of technologies, including React, Vue, React Native, Django, Node.js and Firebase. My journey in software development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. In addition to my professional pursuits, I am an avid traveler, finding joy in exploring new cultures and destinations. Traveling not only broadens my perspective but also fuels my creativity by exposing me to diverse experiences and environments. Alongside my adventures, I indulge in the world of literature, spending my free time immersed in books across various genres. Reading not only enriches my mind but also nurtures critical thinking and continuous personal growth.`;
 
 export const PROJECTS = [
   {
-    title: "JS Editor",
+    title: "Video Streaming Youtube",
     image: project1,
     description:
-      "Built an online editor for showcasing user-created HTML, CSS, and JavaScript code snippets. Utilized ReactJs, Firebase, and Tailwind.",
-    technologies: ["ReactJs", "Firebase", "Tailwind"],
-    liveLink: "https://jseditor-bba2c.web.app",
-    githubLink: "https://github.com/swapnilawasthi-dev/JSeditor"
+      "Built an online video streaming platform for showcasing youtube videos. Utilized ReactJs, Redux, and Tailwind.",
+    technologies: ["ReactJs", "Redux", "Tailwind"],
+    liveLink: "https://stupendous-haupia-936c4c.netlify.app/",
+    githubLink: "https://github.com/Madhur3006/Video-Streaming-Youtube"
   },
   {
-    title: "Trello Task Mangagemennt",
+    title: "Ecommerce Store",
     image: project3,
     description:
-      "Built a task management system using the Pinia store in a Vue.js application. It manages boards, columns, and tasks, allowing users to select and modify tasks within boards.",
-    technologies: ["Vue 3", "Tailwind", "Pinia"],
-    liveLink: "https://trello-task-management-six.vercel.app/",
-    githubLink: "https://github.com/swapnilawasthi-dev/trello-task-management"
+      "Build Ecommerce store in a Vue.js application. It manages products, categories, and orders, allowing users to select and modify products within categories.",
+    technologies: ["Vue 3", "Tailwind", "Vue Router", "Vuex"],
+    liveLink: "https://cute-tapioca-4bb1fa.netlify.app/",
+    githubLink: "https://github.com/Madhur3006/E-commerce"
   },
   {
     title: "The Rick and Morty Show",
@@ -86,7 +86,7 @@ export const PROJECTS = [
 ];
 
 export const CONTACT = {
-  email: "swapnilawasthi.dev@gmail.com",
-  phoneNo: "+91 8003951788",
+  email: "Madhurmangal5@gmail.com",
+  phoneNo: "+91 7773005204",
 };
 

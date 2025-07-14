@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import resumeFile from "../assets/SwapnilAwasthi-Resume.pdf";
+import resumeFile from "../assets/MadhurMangal-Resume.pdf";
 import logoDark from "../assets/logo_dark.svg";
 import logoLight from "../assets/logo_light.svg";
 import { BiSun, BiMoon } from "react-icons/bi";
-import profilePic from "../assets/image.jpg";
+import profilePic from "../assets/profilePhoto1.jpeg";
 import Social from "../components/Social";
 import Email from "../components/Email";
 import * as pdfjs from "pdfjs-dist";
@@ -121,7 +121,7 @@ const Resume = ({ isDarkMode, setIsDarkMode }) => {
                   isDarkMode ? "text-slate-700" : ""
                 }`}
               >
-                Swapnil Awasthi
+                Madhur Mangal
               </h2>
               <div
                 className={`text-center mt-2 ${
@@ -130,13 +130,13 @@ const Resume = ({ isDarkMode, setIsDarkMode }) => {
                     : "text-gray-400 dark:text-gray-300"
                 }`}
               >
-                Software Engineer @Joveo
+                Software Engineer @CommerceIQ
               </div>
               {/* Download Resume Button */}
               <div className="text-center my-6">
                 <a
                   href={resumeFile}
-                  download="SwapnilAwasthi_Resume.pdf"
+                  download="MadhurMangal_Resume.pdf"
                   className={`text-md py-2 px-2 w-full font-mono text-center rounded-lg border-b-2 border-t-2 ${
                     isDarkMode
                       ? "text-neutral-700 border-neutral-700 hover:bg-slate-400"

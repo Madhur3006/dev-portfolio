@@ -50,7 +50,7 @@ const Hero = ({ isDarkMode }) => {
               variants={container(1)}
               initial="hidden"
               animate="visible"
-              className={`my-2 max-w-xl py-6 font-light tracking-tighter ${
+              className={`my-2 max-w-xxl py-6 font-light tracking-tighter ${
                 isDarkMode ? "text-neutral-600" : ""
               }`}
             >
@@ -65,7 +65,7 @@ const Hero = ({ isDarkMode }) => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1.2 }}
               src={profilePic}
-              alt="Swapnil Awasthi"
+              alt="Madhur Mangal"
               className=" rounded-xl"
             />
           </div>
