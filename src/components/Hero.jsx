@@ -40,7 +40,7 @@ const Hero = ({ isDarkMode }) => {
             >
               <Typewriter
                 options={{
-                  strings: ["Software Engineer", "FrontEnd Engineer"],
+                  strings: ["Software Engineer", "Full Stack Engineer"],
                   autoStart: true,
                   loop: true,
                 }}
