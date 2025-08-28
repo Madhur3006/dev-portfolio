@@ -54,6 +54,22 @@ export const ABOUT_TEXT = `I am a dedicated and versatile software engineer with
 
 export const PROJECTS = [
   {
+    title: "AI Conversational Platform",
+    image: project2,
+    description: "An AI conversational platform built using ReactJS that leverages the Gemini Live API for implementing intelligent chat interactions and responses.",   
+    technologies: ["ReactJS", "n8n", "Gemini Live API", "TailwindCss"],
+    liveLink: "https://gemini-clone-ochre-ten.vercel.app/",
+    githubLink: "https://github.com/Madhur3006/Gemini-clone"
+  },
+  {
+    title: "DevTinder",
+    image: project3,
+    description: "A social media platform designed specifically for developers, similar to LinkedIn but tailored for the tech community. Features include developer profiles, project showcases, networking, and professional connections within the software development ecosystem.",
+    technologies: ["ReactJS", "ExpressJS", "MongoDB", "TailwindCss"],
+    liveLink: "http://16.171.253.219/login",
+    githubLink: "https://github.com/Madhur3006/devTinder_FE"
+  },
+  {
     title: "Video Streaming Youtube",
     image: project1,
     description:
@@ -61,26 +77,9 @@ export const PROJECTS = [
     technologies: ["ReactJs", "Redux", "Tailwind"],
     liveLink: "https://stupendous-haupia-936c4c.netlify.app/",
     githubLink: "https://github.com/Madhur3006/Video-Streaming-Youtube"
-  },
-  {
-    title: "Ecommerce Store",
-    image: project3,
-    description:
-      "Build Ecommerce store in a Vue.js application. It manages products, categories, and orders, allowing users to select and modify products within categories.",
-    technologies: ["Vue 3", "Tailwind", "Vue Router", "Vuex"],
-    liveLink: "https://cute-tapioca-4bb1fa.netlify.app/",
-    githubLink: "https://github.com/Madhur3006/E-commerce"
-  },
-  {
-    title: "The Rick and Morty Show",
-    image: project2,
-    description:
-      "A webapp to display characters, locations and episodes of cartoon Rick and Morty utilizing The Rick and Morty API.",
-    technologies: ["ReactJS", "CSS", "Material UI"],
-    liveLink: "http://therickandmorty-webapp.vercel.app/",
-    githubLink: "https://github.com/swapnilawasthi-dev/rickandmorty-webapp"
-  },
+  }
 ];
+
 
 export const CONTACT = {
   email: "Madhurmangal5@gmail.com",
