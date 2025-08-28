@@ -55,7 +55,7 @@ export const ABOUT_TEXT = `I am a dedicated and versatile software engineer with
 export const PROJECTS = [
   {
     title: "AI Conversational Platform",
-    image: project2,
+    image: project1,
     description: "An AI conversational platform built using ReactJS that leverages the Gemini Live API for implementing intelligent chat interactions and responses.",   
     technologies: ["ReactJS", "n8n", "Gemini Live API", "TailwindCss"],
     liveLink: "https://gemini-clone-ochre-ten.vercel.app/",
@@ -71,7 +71,7 @@ export const PROJECTS = [
   },
   {
     title: "Video Streaming Youtube",
-    image: project1,
+    image: project2,
     description:
       "Built an online video streaming platform for showcasing youtube videos. Utilized ReactJs, Redux, and Tailwind.",
     technologies: ["ReactJs", "Redux", "Tailwind"],
