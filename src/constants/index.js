@@ -65,7 +65,7 @@ export const PROJECTS = [
     title: "DevTinder",
     image: project3,
     description: "A social media platform designed specifically for developers, similar to LinkedIn but tailored for the tech community. Features include developer profiles, project showcases, networking, and professional connections within the software development ecosystem.",
-    technologies: ["ReactJS", "ExpressJS", "MongoDB", "TailwindCss"],
+    technologies: ["ReactJS", "ExpressJS", "MongoDB", "Web Sockets"],
     liveLink: "http://16.171.253.219/login",
     githubLink: "https://github.com/Madhur3006/devTinder_FE"
   },
