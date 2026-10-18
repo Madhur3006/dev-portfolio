@@ -1,71 +1,63 @@
-import React from "react";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
+import { createElement } from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { NAVLINKS } from "../constants/index";
-import { motion } from "framer-motion";
+import { NAVLINKS } from "../constants";
 
-const Social = ({ isDarkMode }) => {
+const SOCIAL_ITEMS = [
+  { label: "GitHub", href: NAVLINKS.github, Icon: FaGithub },
+  { label: "LinkedIn", href: NAVLINKS.linkedIn, Icon: FaLinkedin },
+  { label: "X", href: NAVLINKS.x, Icon: FaSquareXTwitter },
+];
+
+const Social = ({ isLightMode }) => {
+  const linkColor = isLightMode
+    ? "text-slate-600 hover:text-cyan-800"
+    : "text-slate-300 hover:text-cyan-200";
+
   return (
-    <motion.div
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      initial={{ opacity: 0, y: 100 }}
-      transition={{ duration: 0.8 }}
-      className="fixed bottom-0 left-4 min-[1025px]:left-10 z-10 text-neutral-400 "
-    >
-      <ul
-        className={`flex flex-col items-center text-2xl justify-center list-none after:content[""]  after:block after:w-px after:h-40 after:bg-slate-300 after:my-0 after:mx-auto ${
-          isDarkMode ? "after:bg-slate-700" : ""
-        }`}
+    <>
+      <aside
+        aria-label="Social profiles"
+        className={`fixed bottom-0 left-8 z-20 hidden flex-col items-center gap-5 xl:flex ${linkColor}`}
       >
-        <li
-          className={` last-of-type:mb-10 pt-6 cursor-pointer hover:transform hover:-translate-y-1 hover:text-white ${
-            isDarkMode ? "text-slate-700 hover:text-neutral-900" : ""
-          }`}
-        >
+        <ul className="flex flex-col items-center gap-5">
+          {SOCIAL_ITEMS.map(({ label, href, Icon }) => (
+            <li key={label}>
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Visit Madhur Mangal on ${label}`}
+                title={label}
+                className="inline-flex h-8 w-8 items-center justify-center rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500"
+              >
+                {createElement(Icon, { "aria-hidden": "true", size: 19 })}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <span
+          aria-hidden="true"
+          className={`h-20 w-px ${isLightMode ? "bg-slate-300" : "bg-slate-600"}`}
+        />
+      </aside>
+
+      <nav aria-label="Social profiles" className="flex items-center justify-center gap-5 py-6 xl:hidden">
+        {SOCIAL_ITEMS.map(({ label, href, Icon }) => (
           <a
+            key={label}
+            href={href}
             target="_blank"
-            href={NAVLINKS.linkedIn}
-            className={`${
-              isDarkMode ? "text-slate-700 hover:text-neutral-900" : ""
-            }`}
+            rel="noopener noreferrer"
+            aria-label={`Visit Madhur Mangal on ${label}`}
+            className={`inline-flex min-h-11 items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 ${linkColor}`}
           >
-            <FaLinkedin />
+            {createElement(Icon, { "aria-hidden": "true", size: 18 })}
+            <span>{label}</span>
           </a>
-        </li>
-        <li
-          className={` last-of-type:mb-10 pt-6 cursor-pointer hover:transform hover:-translate-y-1 hover:text-white ${
-            isDarkMode ? "text-slate-700 hover:text-neutral-900" : ""
-          }`}
-        >
-          <a
-            target="_blank"
-            href={NAVLINKS.github}
-            className={`${
-              isDarkMode ? "text-slate-700 hover:text-neutral-900" : ""
-            }`}
-          >
-            <FaGithub />
-          </a>
-        </li>
-        <li
-          className={` last-of-type:mb-10 pt-6 cursor-pointer hover:transform hover:-translate-y-1 hover:text-white ${
-            isDarkMode ? "text-slate-700 hover:text-neutral-900" : ""
-          }`}
-        >
-          <a
-            target="_blank"
-            href={NAVLINKS.x}
-            className={`${
-              isDarkMode ? "text-slate-700 hover:text-neutral-900" : ""
-            }`}
-          >
-            <FaSquareXTwitter />
-          </a>
-        </li>
-      </ul>
-    </motion.div>
+        ))}
+      </nav>
+    </>
   );
 };
 

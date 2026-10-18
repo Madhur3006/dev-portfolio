@@ -1,89 +1,77 @@
 import { EXPERIENCES } from "../constants";
-import { motion } from "framer-motion";
 
-const Experience = ({ isDarkMode }) => {
+const Experience = ({ isLightMode }) => {
   return (
-    <div id="experience" className="border-b border-zinc-700 pb-4">
-      <motion.h1
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.5 }}
-        className={`my-20 text-center text-4xl ${
-          isDarkMode ? "text-neutral-800" : ""
-        }`}
-      >
-        Professional Experience
-      </motion.h1>
-      <div>
-        {EXPERIENCES.map((experience, index) => (
-          <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
-            <motion.div
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              initial={{ opacity: 0, y: 100 }}
-              transition={{ duration: 1 }}
-              className="w-full lg:w-1/4"
+    <section
+      id="experience"
+      aria-labelledby="experience-title"
+      className="scroll-mt-28 border-b border-slate-700/30 py-16 sm:py-20"
+    >
+      <div className="mb-9 max-w-2xl">
+        <p
+          className={`mb-3 text-sm font-semibold uppercase tracking-[0.18em] ${
+            isLightMode ? "text-cyan-800" : "text-cyan-300"
+          }`}
+        >
+          Career
+        </p>
+        <h2
+          id="experience-title"
+          className={`text-3xl font-semibold tracking-tight sm:text-4xl ${
+            isLightMode ? "text-slate-950" : "text-white"
+          }`}
+        >
+          Professional experience
+        </h2>
+      </div>
+
+      <ol className="space-y-4">
+        {EXPERIENCES.map((experience) => (
+          <li key={`${experience.company}-${experience.year}`}>
+            <article
+              className={`grid gap-4 rounded-2xl border p-5 sm:p-6 md:grid-cols-[12rem_1fr] md:gap-8 ${
+                isLightMode
+                  ? "border-slate-200 bg-white shadow-sm"
+                  : "border-white/10 bg-white/[0.03]"
+              }`}
             >
               <p
-                className={`mb-2 text-sm text-neutral-400 ${
-                  isDarkMode ? "text-neutral-600" : ""
+                className={`text-sm font-medium md:pt-1 ${
+                  isLightMode ? "text-cyan-900" : "text-cyan-200"
                 }`}
               >
                 {experience.year}
               </p>
-            </motion.div>
-            <motion.div
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              initial={{ opacity: 0, y: 100 }}
-              transition={{ duration: 1 }}
-              className="w-full max-w-xl lg:w-3/4"
-            >
-              <div
-                className={`mb-2 font-semibold text-xl ${
-                  isDarkMode ? "text-neutral-600" : ""
-                }`}
-              >
-                {experience.role} -{" "}
-                <span
-                  className={`text-purple-100 ${
-                    isDarkMode ? "text-slate-600" : ""
+              <div>
+                <h3
+                  className={`text-lg font-semibold sm:text-xl ${
+                    isLightMode ? "text-slate-950" : "text-white"
+                  }`}
+                >
+                  {experience.role}
+                </h3>
+                <p
+                  className={`mt-1 font-medium ${
+                    isLightMode ? "text-slate-600" : "text-slate-300"
                   }`}
                 >
                   {experience.company}
-                </span>
+                </p>
+                <ul
+                  className={`mt-4 list-disc space-y-2 pl-5 leading-7 marker:text-cyan-500 ${
+                    isLightMode ? "text-slate-600" : "text-slate-300"
+                  }`}
+                >
+                  {experience.description.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
               </div>
-              <ul
-                className={`mb-4 text-neutral-400 ${
-                  isDarkMode ? "text-neutral-600" : ""
-                }`}
-              >
-                {experience.description.map((point, index) => (
-                  <li key={index} className=" mb-5">
-                    - {point}
-                  </li>
-                ))}
-              </ul>
-              <div className="w-full max-w-xl lg:w-3/4 flex flex-wrap">
-                {experience.technologies.map((tech, index) => (
-                  <code
-                    key={index}
-                    className={`mr-2 mt-4 mb-2 rounded  px-2 py-1 text-sm font-medium  ${
-                      isDarkMode
-                        ? " bg-neutral-300 text-slate-800"
-                        : "bg-neutral-900 text-purple-800"
-                    }`}
-                  >
-                    {tech}
-                  </code>
-                ))}
-              </div>
-            </motion.div>
-          </div>
+            </article>
+          </li>
         ))}
-      </div>
-    </div>
+      </ol>
+    </section>
   );
 };
 

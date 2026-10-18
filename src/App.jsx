@@ -1,15 +1,10 @@
 import React, { useState } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Resume from "./pages/Resume";
 import Home from "./pages/Home";
 
 const App = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isLightMode, setIsLightMode] = useState(false);
 
   return (
     <div>
@@ -18,13 +13,13 @@ const App = () => {
           <Route
             path="*"
             element={
-              <Home isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+              <Home isLightMode={isLightMode} setIsLightMode={setIsLightMode} />
             }
           />
           <Route
             path="/resume"
             element={
-              <Resume isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+              <Resume isLightMode={isLightMode} setIsLightMode={setIsLightMode} />
             }
           />
         </Routes>

@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import About from "../components/About";
@@ -9,34 +8,45 @@ import Contact from "../components/Contact";
 import Social from "../components/Social";
 import Email from "../components/Email";
 
-function Home({ isDarkMode, setIsDarkMode }) {
+const Home = ({ isLightMode, setIsLightMode }) => {
   return (
-    <div className=" overflow-hidden text-neutral-300 antialiased selection:bg-cyan-300 selection:text-cyan-900">
-      <div className="fixed top-0 -z-10 h-full w-full">
-        {/* Dark Mode */}
-        {!isDarkMode && (
-          <div className="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+    <div
+      className={`relative isolate min-h-screen transition-colors duration-200 ${
+        isLightMode ? "bg-slate-50 text-slate-900" : "bg-[#090b12] text-slate-100"
+      }`}
+    >
+      <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+        {isLightMode ? (
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_45%_at_50%_0%,rgba(34,211,238,0.09),transparent)]" />
+        ) : (
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_45%_at_50%_0%,rgba(34,211,238,0.12),transparent)]" />
         )}
-        {/* Light Mode */}
-        {isDarkMode && (
-          <div className="absolute top-0 z-[-2] h-screen w-screen rotate-180 transform bg-white bg-[radial-gradient(60%_120%_at_50%_50%,hsla(0,0%,100%,0)_0,rgba(148,147,147,.9)_100%)]"></div>
-        )}
       </div>
-      <Social isDarkMode={isDarkMode} />
-      <Email isDarkMode={isDarkMode} />
-      <div className="mx-auto px-8 max-md:px-4 ">
-        <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-      </div>
-      <div className="container mx-auto px-16 -mt-14">
-        <Hero isDarkMode={isDarkMode} />
-        <About isDarkMode={isDarkMode} />
-        <Technologies isDarkMode={isDarkMode} />
-        <Projects isDarkMode={isDarkMode} />
-        <Experience isDarkMode={isDarkMode} />
-        {/* <Contact /> */}
-      </div>
+
+      <Navbar isLightMode={isLightMode} setIsLightMode={setIsLightMode} />
+
+      <main className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+        <Hero isLightMode={isLightMode} />
+        <About isLightMode={isLightMode} />
+        <Technologies isLightMode={isLightMode} />
+        <Projects isLightMode={isLightMode} />
+        <Experience isLightMode={isLightMode} />
+        <Contact isLightMode={isLightMode} />
+      </main>
+
+      <footer
+        className={`border-t px-4 sm:px-6 lg:px-8 ${
+          isLightMode ? "border-slate-200" : "border-white/10"
+        }`}
+      >
+        <div className="mx-auto max-w-6xl">
+          <Social isLightMode={isLightMode} />
+        </div>
+      </footer>
+
+      <Email isLightMode={isLightMode} />
     </div>
   );
-}
+};
 
 export default Home;

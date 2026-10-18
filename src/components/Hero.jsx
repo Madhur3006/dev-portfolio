@@ -1,77 +1,85 @@
-import { HERO_CONTENT } from "../constants";
-import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import profilePic from "../assets/profilePhoto1.jpeg";
-import Typewriter from "typewriter-effect";
+import { HERO_CONTENT, HERO_ROLE } from "../constants";
 
-const container = (delay) => ({
-  hidden: { y: 100, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: { duration: 0.5, delay: delay },
-  },
-});
-
-const Hero = ({ isDarkMode }) => {
+const Hero = ({ isLightMode }) => {
   return (
-    <div className=" md:mt-20 max-[425px]:mt-10 border-b border-neutral-900 pb-4 lg:mmb-35">
-      <div className="flex flex-wrap">
-        <div className="w-full lg:w-1/2">
-          <div className="flex flex-col items-center lg:items-start">
-            <motion.h1
-              variants={container(0)}
-              initial="hidden"
-              animate="visible"
-              className={`max-[375px]:text-3xl  max-md:text-4xl pb-16 text-6xl font-thin tracking-tight lg:mt-16 xl:text-8xl ${
-                isDarkMode ? "text-neutral-800" : ""
-              }`}
-            >
-              Madhur Mangal 
-            </motion.h1>
-            <motion.span
-              variants={container(0.5)}
-              initial="hidden"
-              animate="visible"
-              className={`bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text bg-clip-test text-3xl tracking-tight text-transparent ${
-                isDarkMode
-                  ? "from-slate-400 via-neutral-400 to-neutral-900"
-                  : "from-pink-300 via-slate-500 to-purple-500"
-              }`}
-            >
-              <Typewriter
-                options={{
-                  strings: ["Software Engineer", "Full Stack Engineer"],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
-            </motion.span>
-            <motion.p
-              variants={container(1)}
-              initial="hidden"
-              animate="visible"
-              className={`my-2 max-w-xxl py-6 font-light tracking-tighter ${
-                isDarkMode ? "text-neutral-600" : ""
-              }`}
-            >
-              {HERO_CONTENT}
-            </motion.p>
-          </div>
-        </div>
-        <div className="w-full lg:w-1/2 lg:p-8">
-          <div className="flex justify-center">
-            <motion.img
-              initial={{ y: 100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 1.2 }}
-              src={profilePic}
-              alt="Madhur Mangal"
-              className=" rounded-xl"
-            />
-          </div>
+    <section
+      id="home"
+      aria-labelledby="hero-title"
+      className="grid scroll-mt-28 items-center gap-12 border-b border-slate-700/30 py-16 sm:py-20 lg:min-h-[calc(100vh-4rem)] lg:grid-cols-[1.2fr_0.8fr] lg:gap-16 lg:py-24"
+    >
+      <div className="max-w-2xl">
+        <p
+          className={`mb-4 text-sm font-semibold uppercase tracking-[0.18em] ${
+            isLightMode ? "text-cyan-800" : "text-cyan-300"
+          }`}
+        >
+          Frontend-focused full-stack engineer · 4+ years
+        </p>
+        <h1
+          id="hero-title"
+          className={`text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl ${
+            isLightMode ? "text-slate-950" : "text-white"
+          }`}
+        >
+          Madhur Mangal
+        </h1>
+        <h2
+          className={`mt-4 max-w-2xl text-2xl font-medium leading-tight tracking-tight sm:text-3xl lg:text-4xl ${
+            isLightMode ? "text-slate-700" : "text-slate-200"
+          }`}
+        >
+          {HERO_ROLE}
+        </h2>
+        <p
+          className={`mt-6 max-w-xl text-base leading-8 sm:text-lg ${
+            isLightMode ? "text-slate-600" : "text-slate-300"
+          }`}
+        >
+          {HERO_CONTENT}
+        </p>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <a
+            href="#projects"
+            className={`inline-flex min-h-11 items-center justify-center rounded-lg px-5 py-3 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 ${
+              isLightMode
+                ? "bg-cyan-800 text-white hover:bg-cyan-900 focus-visible:ring-offset-white"
+                : "bg-cyan-300 text-slate-950 hover:bg-cyan-200 focus-visible:ring-offset-neutral-950"
+            }`}
+          >
+            View Projects
+          </a>
+          <Link
+            to="/resume"
+            className={`inline-flex min-h-11 items-center justify-center rounded-lg border px-5 py-3 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 ${
+              isLightMode
+                ? "border-slate-300 text-slate-800 hover:border-slate-500 hover:bg-slate-100 focus-visible:ring-offset-white"
+                : "border-slate-600 text-slate-100 hover:border-slate-400 hover:bg-white/5 focus-visible:ring-offset-neutral-950"
+            }`}
+          >
+            View Résumé
+          </Link>
         </div>
       </div>
-    </div>
+
+      <div className="mx-auto w-full max-w-sm">
+        <div
+          className={`relative overflow-hidden rounded-3xl border p-2 shadow-2xl ${
+            isLightMode
+              ? "border-slate-200 bg-white shadow-slate-300/40"
+              : "border-white/10 bg-white/5 shadow-black/40"
+          }`}
+        >
+          <img
+            src={profilePic}
+            alt="Portrait of Madhur Mangal"
+            className="aspect-[4/5] w-full rounded-2xl object-cover object-center"
+            fetchPriority="high"
+          />
+        </div>
+      </div>
+    </section>
   );
 };
 

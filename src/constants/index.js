@@ -1,88 +1,170 @@
-import project1 from "../assets/projects/project-1.png";
-import project2 from "../assets/projects/project2.png";
-import project3 from "../assets/projects/project3.png";
-
-
-export const EXPERIENCES = [
-  {
-    year: "July 2023 - Present",
-    role: "Software Engineer",
-    company: "CommerceIQ",
-    description: [
-      `Implemented and delivered full end-to-end solutions using Vue.js, integration with backend systems, and final deployment`,
-      `Conducted code reviews and provided constructive feedback on pull requests to ensure code quality, adherence to best practices, and maintainability. Documented key features, processes, and configurations where needed to ensure clarity and ease of future development and maintenance`,
-      `Received recognition and an award for the swift delivery of a product, instrumental in establishing a partnership with Walmart. The success of this project led to CommerceIQ’s official designation as partners for advertisement tech platforms.`
-    ],
-    technologies: ["React", "Vue", "SCSS", "Javascript", "Typescript", "Node.js", "Firebase", "AWS"],
-  },
-  {
-    year: "Feb 2022 - June 2023",
-    role: "Associate Software Engineer",
-    company: "Capgemini Engineering",
-    description: [
-      `Collaborated with a cross-functional team to develop and maintain IBM Spectrum Scale GUI, a cutting-edge web application for managing file and object storage.`,
-      `Engineered a comprehensive User Interface overhaul, integrating FluentUI library and transitioning 70% of the codebase from Dojo to React.js for enhanced functionality and maintainability.`,
-      `Played a pivotal role in fostering collaboration among cross-functional teams, facilitating seamless transitions of new features and updates into existing projects to meet project deadlines and objectives`,
-      `Acted as a primary liaison with clients, effectively gathering and analyzing product requirements and feedback to drive feature development and enhance product functionality and usability`,
-      `Engineered a robust progress bar feature, empowering users to download extensive datasets in manageable chunks, thereby optimizing performance and user experience`,
-    ],
-    technologies: ["React", "SCSS", "Ionic", "React Native", "Javascript", "Typescript"],
-  },
-  {
-    year: "Aug 2022 - Jan 2023",
-    role: "Development Intern",
-    company: "Dataweave Technologies",
-    description: [
-      'Collaborated closely with UX designers and backend developers to translate requirements and wireframes into functional and visually appealing user interfaces.',
-      `Expertly crafted HTML emails with pre-2000 CSS, achieving responsive and visually appealing layouts without relying on CSS Grid or Flexbox.`,
-      `Automated email delivery utilizing AWS SES, streamlining communication processes`
-    ],
-    technologies: ["React", "CSS", "HTML", "AWS", "Javascript"],
-  },
-];
+import videoStreamingImage from "../assets/projects/project2.png";
+import conversationalImage from "../assets/projects/project-1.png";
 
 export const NAVLINKS = {
   github: "https://github.com/Madhur3006",
-  linkedIn: "linkedin.com/in/madhur-mangal-a42b4821a",
+  linkedIn: "https://linkedin.com/in/madhur-mangal-a42b4821a",
   x: "https://x.com/madhurmangal4?s=11",
 };
 
+export const CONTACT = {
+  email: "Madhurmangal5@gmail.com",
+};
 
-export const HERO_CONTENT = `Software Engineer with about 3 years of experience in Javascript and its frameworks, translating user stories and wireframes into high quality reusable code, delivering seamless and high-performance user experiences. Adept at consistently updating skills with emerging technologies while maintaining a strong foundation in data structures and algorithms.`;
+export const EDUCATION = {
+  institution: "The LNM Institute of Information Technology",
+  location: "Jaipur",
+  degree: "Bachelor of Engineering in Computer Science and Engineering",
+  dates: "2018 – 2022",
+};
 
-export const ABOUT_TEXT = `I am a dedicated and versatile software engineer with a passion for creating efficient and user-friendly web applications. With 3 years of professional experience, I have worked with a variety of technologies, including React, Vue, React Native, Django, Node.js and Firebase. My journey in software development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. In addition to my professional pursuits, I am an avid traveler, finding joy in exploring new cultures and destinations. Traveling not only broadens my perspective but also fuels my creativity by exposing me to diverse experiences and environments. Alongside my adventures, I indulge in the world of literature, spending my free time immersed in books across various genres. Reading not only enriches my mind but also nurtures critical thinking and continuous personal growth.`;
+export const CERTIFICATIONS = [
+  "Web Development — Kodebay",
+  "Namaste JavaScript — Akshay Saini",
+  "Namaste React — Akshay Saini",
+  "Namaste Node — Akshay Saini",
+  "Azure Fundamentals (AZ-900)",
+  "AWS Cloud Practitioner",
+];
+
+export const AWARDS = [
+  "Spot Award — Innovaccer UI framework adoption",
+  "Delivery Ninja Award — Walmart partnership delivery at CommerceIQ",
+];
+
+export const HERO_ROLE = "Software Development Engineer";
+
+export const HERO_CONTENT =
+  "Frontend-focused full-stack engineer with 4+ years of experience building scalable web applications across healthcare, retail, and cloud platforms. I focus on React, TypeScript, micro-frontends, accessibility, and performance.";
+
+export const ABOUT_TEXT =
+  "I build scalable web applications across healthcare, retail, and cloud platforms. My work spans frontend architecture and full-stack delivery, with a focus on accessible, performant experiences using React, TypeScript, and micro-frontends.";
+
+export const SKILL_GROUPS = [
+  {
+    title: "Frontend & architecture",
+    skills: [
+      "React",
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "Vue.js",
+      "React Native",
+      "Redux",
+      "React Router",
+      "Micro-frontends",
+      "Module Federation",
+      "Webpack",
+      "HTML5",
+      "CSS / Sass",
+      "Tailwind CSS",
+      "Responsive design",
+    ],
+  },
+  {
+    title: "Backend & APIs",
+    skills: ["Node.js", "Express.js", "REST APIs", "GraphQL", "Python"],
+  },
+  {
+    title: "Accessibility & quality",
+    skills: [
+      "WCAG 2.2 accessibility",
+      "Performance optimization",
+      "Jest",
+      "React Testing Library",
+      "Unit testing",
+      "Code reviews",
+    ],
+  },
+  {
+    title: "Cloud & delivery",
+    skills: [
+      "Google Cloud",
+      "AWS",
+      "Docker",
+      "Git",
+      "Jenkins",
+      "CI/CD",
+      "npm / Yarn",
+      "Jira",
+      "Agile / Scrum",
+      "Claude Code",
+      "Cursor",
+    ],
+  },
+];
+
+export const FEATURED_TECHNOLOGIES = [
+  "React",
+  "TypeScript",
+  "JavaScript",
+  "Node.js",
+  "Google Cloud",
+  "AWS",
+  "Docker",
+  "Webpack",
+];
+
+export const EXPERIENCES = [
+  {
+    year: "Sep 2025 – Present",
+    role: "Software Development Engineer 1",
+    company: "Innovaccer",
+    description: [
+      "Drive development of P360, a patient platform for clinical data workflows, and frontend architecture for a Module Federation micro-frontend system with independently deployable features.",
+      "Led a WCAG 2.2 audit across 4 repositories covering 273 issues; resolved 52% through automated fixes and a structured sprint plan.",
+      "Built a reusable React file preview for PDF, DOCX, XLSX, images, video, and audio, removing third-party viewer dependencies.",
+      "Resolved performance bottlenecks and memory leaks in patient-data views; used AI-assisted tools to speed debugging and code review.",
+    ],
+  },
+  {
+    year: "Jan 2025 – Sep 2025",
+    role: "Fullstack Software Engineer",
+    company: "CloudSufi",
+    description: [
+      "Led frontend delivery of Google Dataplex from the ground up to a production-ready application.",
+      "Built a Node.js middleware layer for REST orchestration, authentication, and data transformation with Google Cloud services.",
+      "Worked directly with Google product, UX, and technical stakeholders; mentored junior engineers on architecture and code quality.",
+    ],
+  },
+  {
+    year: "Aug 2023 – Jan 2025",
+    role: "Software Development Engineer UI",
+    company: "CommerceIQ",
+    description: [
+      "Spearheaded advertising campaign management for Walmart and Target, contributing to an 80% contract renewal rate.",
+      "Designed and delivered Amazon and Walmart campaign creation features associated with 120% customer-base expansion.",
+      "Received the Delivery Ninja Award for delivery of a product pivotal to CommerceIQ’s Walmart ad-tech partnership; conducted code reviews to support maintainability.",
+    ],
+  },
+  {
+    year: "Jan 2022 – Jul 2023",
+    role: "Associate II Software Engineer",
+    company: "Capgemini Engineering",
+    description: [
+      "Developed IBM Spectrum Scale GUI for managing enterprise file and object storage.",
+      "Integrated Fluent UI and led migration of 70% of the codebase from Dojo to React; reached 80% code coverage with Jest and React Testing Library.",
+      "Built a backup state-management library with pause and resume controls, improving backup performance by 2×.",
+    ],
+  },
+];
 
 export const PROJECTS = [
   {
-    title: "AI Conversational Platform",
-    image: project1,
-    description: "An AI conversational platform built using ReactJS that leverages the Gemini Live API for implementing intelligent chat interactions and responses.",   
-    technologies: ["ReactJS", "n8n", "Gemini Live API", "TailwindCss"],
-    liveLink: "https://gemini-clone-ochre-ten.vercel.app/",
-    githubLink: "https://github.com/Madhur3006/Gemini-clone"
-  },
-  {
-    title: "DevTinder",
-    image: project3,
-    description: "A social media platform designed specifically for developers, similar to LinkedIn but tailored for the tech community. Features include developer profiles, project showcases, networking, and professional connections within the software development ecosystem.",
-    technologies: ["ReactJS", "ExpressJS", "MongoDB", "Web Sockets"],
-    liveLink: "http://16.171.253.219/login",
-    githubLink: "https://github.com/Madhur3006/devTinder_FE"
-  },
-  {
-    title: "Video Streaming Youtube",
-    image: project2,
+    title: "Video Streaming Platform",
+    image: videoStreamingImage,
     description:
-      "Built an online video streaming platform for showcasing youtube videos. Utilized ReactJs, Redux, and Tailwind.",
-    technologies: ["ReactJs", "Redux", "Tailwind"],
+      "Live video streaming app with Redux state management for streams, user interactions, and authentication.",
+    technologies: ["React", "Redux", "YouTube Live API"],
     liveLink: "https://stupendous-haupia-936c4c.netlify.app/",
-    githubLink: "https://github.com/Madhur3006/Video-Streaming-Youtube"
-  }
+    githubLink: "https://github.com/Madhur3006/Video-Streaming-Youtube",
+  },
+  {
+    title: "AI Conversational Platform",
+    image: conversationalImage,
+    description:
+      "Conversational AI platform with live Gemini API integration, parallel chat threads, and Redux-managed authentication and chat history.",
+    technologies: ["React", "Redux", "Google Gemini API"],
+    liveLink: "https://gemini-clone-ochre-ten.vercel.app/",
+    githubLink: "https://github.com/Madhur3006/Gemini-clone",
+  },
 ];
-
-
-export const CONTACT = {
-  email: "Madhurmangal5@gmail.com",
-  phoneNo: "+91 7773005204",
-};
-
