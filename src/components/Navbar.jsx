@@ -10,6 +10,7 @@ const SECTION_LINKS = [
   { href: "#technologies", label: "Skills" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
+  { href: "#credentials", label: "Credentials" },
 ];
 
 const Navbar = ({ isLightMode, setIsLightMode }) => {

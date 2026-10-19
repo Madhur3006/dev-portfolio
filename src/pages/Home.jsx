@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import About from "../components/About";
 import Technologies from "../components/Technologies";
 import Experience from "../components/Experience";
+import CertificationsAwards from "../components/CertificationsAwards";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import Social from "../components/Social";
@@ -31,6 +32,7 @@ const Home = ({ isLightMode, setIsLightMode }) => {
         <Technologies isLightMode={isLightMode} />
         <Projects isLightMode={isLightMode} />
         <Experience isLightMode={isLightMode} />
+        <CertificationsAwards isLightMode={isLightMode} />
         <Contact isLightMode={isLightMode} />
       </main>
 

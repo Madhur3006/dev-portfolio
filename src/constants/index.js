@@ -28,34 +28,42 @@ export const ABOUT_TEXT =
 
 export const SKILL_GROUPS = [
   {
-    title: "Engineering",
+    title: "FDE Delivery",
+    skills: [
+      "Customer-facing solution delivery",
+      "Stakeholder collaboration",
+      "Product validation",
+      "Accessibility engineering",
+      "SLA reporting",
+    ],
+  },
+  {
+    title: "Agentic AI",
+    skills: [
+      "Agent creation and orchestration",
+      "Agent skills and plugins",
+      "MCP",
+      "Claude Cowork",
+      "Hugging Face",
+      "Mastra.ai",
+    ],
+  },
+  {
+    title: "Engineering and Cloud",
     skills: [
       "React",
       "TypeScript",
       "JavaScript",
       "Node.js",
       "Express",
-      "Redux",
       "REST APIs",
       "GraphQL",
+      "Redux",
       "Module Federation",
       "Webpack",
+      "Google Cloud",
       "AWS",
       "CI/CD",
-    ],
-  },
-  {
-    title: "Product & AI",
-    skills: [
-      "WCAG accessibility",
-      "Validation frameworks",
-      "Customer reporting",
-      "Agent creation & orchestration",
-      "Agent skills & plugins",
-      "MCP",
-      "Claude Cowork",
-      "Hugging Face",
-      "Mastra.ai",
     ],
   },
 ];
@@ -69,9 +77,21 @@ export const FEATURED_TECHNOLOGIES = [
   "Webpack",
 ];
 
+export const CERTIFICATIONS = [
+  "Web Development (Kodebay)",
+  "Namaste JavaScript, React, and Node.js (Akshay Saini)",
+  "Azure Fundamentals (AZ-900)",
+  "AWS Cloud Practitioner",
+];
+
+export const AWARDS = [
+  "Spot Award — Innovaccer UI framework adoption",
+  "Delivery Ninja Award — Walmart partnership delivery at CommerceIQ",
+];
+
 export const EXPERIENCES = [
   {
-    year: "Sep 2025–Present",
+    year: "Sep 2025–Aug 2026",
     role: "Forward Deployed Engineer (FDE) / Software Development Engineer I",
     company: "Innovaccer",
     location: "Noida, India",
@@ -124,7 +144,7 @@ export const PROJECTS = [
   },
   {
     title: "Investment Market Macro-Factor Model",
-    status: "In progress; deployment link forthcoming",
+    liveLink: "https://iseahorse.netlify.app/",
     description:
       "Analyzes macro factors using supplied market data and iteratively refines outputs through MCP-connected workflows informed by investor input.",
   },

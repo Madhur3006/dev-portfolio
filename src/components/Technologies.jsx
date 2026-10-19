@@ -45,7 +45,7 @@ const Technologies = ({ isLightMode }) => {
           Technologies & tools
         </h2>
         <p className={`mt-3 leading-7 ${isLightMode ? "text-slate-600" : "text-slate-300"}`}>
-          Engineering skills and product-facing AI capabilities from my current work.
+          Skills grouped across customer-facing delivery, agentic AI, and engineering and cloud.
         </p>
       </div>
 
@@ -71,7 +71,7 @@ const Technologies = ({ isLightMode }) => {
         })}
       </ul>
 
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {SKILL_GROUPS.map((group) => (
           <article
             key={group.title}
