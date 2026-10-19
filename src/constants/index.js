@@ -18,34 +18,44 @@ export const EDUCATION = {
   dates: "2018–2022",
 };
 
-export const HERO_ROLE = "Forward Deployed Engineer";
+export const HERO_ROLE = "Harnessing artificial intelligence naturally.";
 
 export const HERO_CONTENT =
-  "Forward Deployed Engineer and frontend-focused full-stack engineer with 4+ years of experience delivering customer-facing products across healthcare, cloud data, and retail. Combines React, TypeScript, Node.js, accessibility, product validation, and AI-enabled workflows to translate product and customer needs into production software.";
+  "AI-driven software engineer with 4+ years building customer-facing products across healthcare, cloud data, and retail. Guided by harnessing artificial intelligence naturally, I apply AI and agentic workflows where they improve product development, validation, and support, alongside React, TypeScript, Node.js, accessibility, and cloud engineering.";
 
 export const ABOUT_TEXT =
-  "I deliver customer-facing products across healthcare, cloud data, and retail, combining React, TypeScript, and Node.js with accessibility, product validation, and AI-enabled workflows to translate product and customer needs into production software.";
+  "I start with customer and business needs, then apply AI and agentic workflows where they can improve product development, validation, or support. My work spans healthcare, cloud data, and retail, combining React, TypeScript, Node.js, accessibility, and cloud engineering. Forward Deployed Engineer experience keeps this work connected to the people and systems it serves.";
 
 export const SKILL_GROUPS = [
   {
-    title: "FDE Delivery",
+    title: "Agentic AI",
     skills: [
-      "Customer-facing solution delivery",
-      "Stakeholder collaboration",
-      "Product validation",
-      "Accessibility engineering",
-      "SLA reporting",
+      "Agent design and orchestration",
+      "Multi-agent workflows",
+      "MCP",
+      "Skills and plugins",
+      "Workflow automation",
     ],
   },
   {
-    title: "Agentic AI",
+    title: "Platforms",
     skills: [
-      "Agent creation and orchestration",
-      "Agent skills and plugins",
-      "MCP",
+      "OpenAI",
+      "Anthropic Claude",
+      "Meta Llama",
       "Claude Cowork",
       "Hugging Face",
       "Mastra.ai",
+    ],
+  },
+  {
+    title: "Product",
+    skills: [
+      "Customer delivery",
+      "Stakeholder collaboration",
+      "Validation",
+      "Accessibility",
+      "SLA reporting",
     ],
   },
   {
@@ -56,8 +66,7 @@ export const SKILL_GROUPS = [
       "JavaScript",
       "Node.js",
       "Express",
-      "REST APIs",
-      "GraphQL",
+      "REST/GraphQL",
       "Redux",
       "Module Federation",
       "Webpack",
@@ -66,15 +75,6 @@ export const SKILL_GROUPS = [
       "CI/CD",
     ],
   },
-];
-
-export const FEATURED_TECHNOLOGIES = [
-  "React",
-  "TypeScript",
-  "JavaScript",
-  "Node.js",
-  "AWS",
-  "Webpack",
 ];
 
 export const CERTIFICATIONS = [
@@ -92,7 +92,7 @@ export const AWARDS = [
 export const EXPERIENCES = [
   {
     year: "Sep 2025–Aug 2026",
-    role: "Forward Deployed Engineer (FDE) / Software Development Engineer I",
+    role: "Forward Deployed Engineer (FDE) / Software Development Engineer",
     company: "Innovaccer",
     location: "Noida, India",
     description: [
@@ -141,17 +141,20 @@ export const PROJECTS = [
     status: "In progress; deployment link forthcoming",
     description:
       "A hands-on hiring platform where candidates turn real problems into agentic solutions, bridging AI fundamentals with practical agent building.",
+    visual: "hiring",
   },
   {
     title: "Investment Market Macro-Factor Model",
     liveLink: "https://iseahorse.netlify.app/",
     description:
-      "Analyzes macro factors using supplied market data and iteratively refines outputs through MCP-connected workflows informed by investor input.",
+      "Analyzes supplied market data to study macro factors, then iteratively refines outputs through MCP-connected workflows informed by investor input.",
+    visual: "macro",
   },
   {
     title: "Agentic Council Framework",
     liveLink: "https://cognitive-branching-tool--awasthisubodhon.replit.app/",
     description:
-      "Explores a multi-agent council that gathers and synthesizes perspectives into a response, inspired by Perplexity’s Council feature.",
+      "A multi-agent council that gathers and synthesizes perspectives, inspired by Perplexity’s Council feature.",
+    visual: "council",
   },
 ];

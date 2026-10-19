@@ -1,4 +1,3 @@
-import aboutImage from "../assets/profilePhoto2.jpeg";
 import { ABOUT_TEXT } from "../constants";
 
 const About = ({ isLightMode }) => {
@@ -9,12 +8,12 @@ const About = ({ isLightMode }) => {
       className="scroll-mt-28 border-b border-slate-700/30 py-16 sm:py-20"
     >
       <div className="grid items-center gap-10 md:grid-cols-[0.8fr_1.2fr] md:gap-16">
-        <div className="mx-auto w-full max-w-xs">
+        <div className={`mx-auto w-full max-w-xs rounded-2xl border p-1 ${isLightMode ? "border-slate-200 bg-white" : "border-white/10 bg-white/[0.03]"}`}>
           <img
-            src={aboutImage}
-            alt="Madhur Mangal"
+            src="/profile_image.jpg"
+            alt="Portrait of Madhur Mangal"
             loading="lazy"
-            className="aspect-[4/3] w-full rounded-2xl object-cover object-center shadow-xl"
+            className="aspect-[4/3] w-full rounded-xl object-cover object-center"
           />
         </div>
         <div>
@@ -31,7 +30,7 @@ const About = ({ isLightMode }) => {
               isLightMode ? "text-slate-950" : "text-white"
             }`}
           >
-            Engineering across complex domains
+            AI that fits the work
           </h2>
           <p
             className={`mt-5 max-w-2xl text-base leading-8 ${

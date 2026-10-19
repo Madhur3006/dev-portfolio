@@ -2,7 +2,7 @@
 
 ## Project context
 
-Responsive React portfolio for Madhur Mangal, a Forward Deployed Engineer with 4+ years of experience across healthcare, cloud data, and retail. The site is a static frontend with no application server, API, database, or authentication.
+Responsive React portfolio for Madhur Mangal, an AI-driven software engineer with 4+ years of experience across healthcare, cloud data, and retail. Forward Deployed Engineer experience provides career context for the customer-facing work. The site is a static frontend with no application server, API, database, or authentication.
 
 The homepage presents the profile, grouped skills, three selected projects, four roles, and email, phone, and social links. The current résumé PDF is served from `public/Madhur_Mangal_Resume_FDE.pdf`; the old `/resume` path redirects to that file.
 
@@ -42,7 +42,7 @@ index.html
 - `src/App.jsx` owns `isLightMode`, redirects `/resume` to the static PDF, and renders Home for other paths. Dark mode is the default; the header toggle switches to light mode.
 - `src/pages/Home.jsx` composes the homepage sections and responsive social/contact links.
 - Hero and navigation résumé links point directly to the static PDF so browser viewers can display or download it.
-- Section navigation uses the IDs `about`, `technologies`, `projects`, and `experience`.
+- Section navigation uses the IDs `about`, `technologies`, `projects`, `experience`, and `credentials`.
 
 ## Source map and component responsibilities
 
@@ -56,17 +56,20 @@ src/
 │   └── Home.jsx                  Portfolio composition and theme background
 ├── components/
 │   ├── Navbar.jsx                Sticky responsive navigation, theme toggle, mobile menu
-│   ├── Hero.jsx                  Name, full role, summary, project and résumé actions
+│   ├── Hero.jsx                  AI-driven engineering position, summary, portrait, project and résumé actions
 │   ├── About.jsx                 Concise profile summary
-│   ├── Technologies.jsx          Labeled core icons and grouped skill lists
-│   ├── Projects.jsx              Responsive project cards and the Agentic Council live demo
+│   ├── Technologies.jsx          Responsive grouped skill lists
+│   ├── Projects.jsx              Responsive project cards and live demo links
+│   ├── ProjectVisual.jsx         Accessible illustrative workflow diagrams for selected projects
 │   ├── Experience.jsx            Scannable role/date/employer cards and outcome bullets
+│   ├── AgentEvaluationFocus.jsx  Clearly labeled, non-project-specific agent evaluation method
 │   ├── Contact.jsx               Email and phone contact links
 │   ├── Social.jsx                Desktop side rail and in-flow smaller-screen links
 │   └── Email.jsx                 Desktop-only fixed email rail
 └── assets/
-    ├── profilePhoto*.jpeg        Profile photographs
     ├── logo_dark.svg, logo_light.svg
+public/
+└── profile_image.jpg             Optimized main portrait used in Hero and About
 ```
 
 The current résumé PDF served from `public/` is `Madhur_Mangal_Resume_FDE.pdf`.
@@ -78,11 +81,13 @@ The current résumé PDF served from `public/` is `Madhur_Mangal_Resume_FDE.pdf`
 | `App.jsx` | `App()` | Holds `isLightMode`; redirects `/resume` to the résumé PDF and renders Home. |
 | `Home.jsx` | `Home({ isLightMode, setIsLightMode })` | Renders Navbar, Hero, About, Technologies, Projects, Experience, Contact, Social, and Email. |
 | `Navbar.jsx` | `Navbar(...)` | Section links, accessible mobile menu (Escape closes it), résumé PDF link, theme toggle. |
-| `Hero.jsx` | `Hero({ isLightMode })` | Static, responsive `HERO_ROLE`, summary, profile image, View Projects and View Résumé actions. |
-| `About.jsx` | `About({ isLightMode })` | Concise `ABOUT_TEXT` and profile image. |
-| `Technologies.jsx` | `Technologies({ isLightMode })` | Labeled icon set for featured technologies and `SKILL_GROUPS` cards. |
-| `Projects.jsx` | `Projects({ isLightMode })` | Maps `PROJECTS` into responsive summary cards with project status or a Live demo link. |
+| `Hero.jsx` | `Hero({ isLightMode })` | AI-driven software engineering positioning, resume summary, main portrait, View Projects and View Résumé actions. |
+| `About.jsx` | `About({ isLightMode })` | Concise `ABOUT_TEXT` and the same main portrait. |
+| `Technologies.jsx` | `Technologies({ isLightMode })` | Maps `SKILL_GROUPS` into responsive, readable skills cards. |
+| `Projects.jsx` | `Projects({ isLightMode })` | Maps `PROJECTS` into responsive cards with illustrative visual, status, or Live demo link. |
+| `ProjectVisual.jsx` | `ProjectVisual({ type, isLightMode })` | Renders accessible conceptual project workflows; visuals are labeled illustrative rather than screenshots or live data. |
 | `Experience.jsx` | `Experience({ isLightMode })` | Maps `EXPERIENCES` into date, role, employer, and outcome bullets. |
+| `AgentEvaluationFocus.jsx` | `AgentEvaluationFocus({ isLightMode })` | Shows an evaluation approach based on observable agent behavior, clearly separate from shipped Innovaccer work. |
 | `Contact.jsx` | `Contact({ isLightMode })` | Email and `tel:` contact CTAs. |
 | `Social.jsx` | `Social({ isLightMode })` | Icon links on wide screens; labeled in-flow links below xl. |
 | `Email.jsx` | `Email({ isLightMode })` | Wide-screen fixed email link; smaller screens use the Contact section. |
@@ -90,7 +95,7 @@ The current résumé PDF served from `public/` is `Madhur_Mangal_Resume_FDE.pdf`
 ### Shared content: `src/constants/index.js`
 
 - `HERO_ROLE`, `HERO_CONTENT`, `ABOUT_TEXT`: headline, summary, and concise About text.
-- `SKILL_GROUPS`, `FEATURED_TECHNOLOGIES`: categorized skills and accessible icon labels.
+- `SKILL_GROUPS`: agentic AI, platforms, product, and engineering/cloud skills.
 - `EXPERIENCES`: entries shaped as `{ year, role, company, location, description: string[] }`.
 - `PROJECTS`: entries shaped as `{ title, status?, description, liveLink? }`.
 - `EDUCATION`: education details from the current résumé.
@@ -100,7 +105,7 @@ The current résumé PDF served from `public/` is `Madhur_Mangal_Resume_FDE.pdf`
 
 - React 19, Vite 7, Tailwind CSS 3, and PostCSS provide the frontend and styling pipeline.
 - Components use Tailwind utility classes; global focus and reduced-motion rules live in `src/index.css`.
-- React Icons provides labeled technology and social icons. Sections use semantic headings and lists, external links have descriptive labels, and controls expose accessible names/state.
+- React Icons provides social icons. Sections use semantic headings and lists, external links have descriptive labels, and controls expose accessible names/state.
 - Mobile navigation collapses into a keyboard-dismissible menu. Social links move into the page flow below xl screens; email remains available in the Contact section.
 - Theme-specific text and surfaces are selected through `isLightMode`; there is no persisted preference.
 - `index.html` sets the site title, description, theme color, and custom favicon.

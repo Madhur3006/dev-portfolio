@@ -1,4 +1,5 @@
 import { PROJECTS } from "../constants";
+import ProjectVisual from "./ProjectVisual";
 
 const Projects = ({ isLightMode }) => {
   return (
@@ -29,21 +30,22 @@ const Projects = ({ isLightMode }) => {
         {PROJECTS.map((project) => (
           <article
             key={project.title}
-            className={`flex h-full flex-col rounded-2xl border p-5 sm:p-6 ${
+            className={`flex h-full flex-col rounded-2xl border p-4 sm:p-5 ${
               isLightMode
                 ? "border-slate-200 bg-white shadow-sm"
                 : "border-white/10 bg-white/[0.03]"
             }`}
           >
+            <ProjectVisual type={project.visual} isLightMode={isLightMode} />
             <h3
-              className={`text-xl font-semibold ${
+              className={`mt-5 text-lg font-semibold leading-snug sm:text-xl ${
                 isLightMode ? "text-slate-950" : "text-white"
               }`}
             >
               {project.title}
             </h3>
             <p
-              className={`mt-3 flex-1 leading-7 ${
+              className={`mt-3 flex-1 text-sm leading-7 sm:text-base ${
                 isLightMode ? "text-slate-600" : "text-slate-300"
               }`}
             >

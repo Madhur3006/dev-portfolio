@@ -1,25 +1,4 @@
-import {
-  SiAmazonwebservices,
-  SiDocker,
-  SiGooglecloud,
-  SiJavascript,
-  SiNodedotjs,
-  SiReact,
-  SiTypescript,
-  SiWebpack,
-} from "react-icons/si";
-import { FEATURED_TECHNOLOGIES, SKILL_GROUPS } from "../constants";
-
-const TECHNOLOGY_ICONS = {
-  React: SiReact,
-  TypeScript: SiTypescript,
-  JavaScript: SiJavascript,
-  "Node.js": SiNodedotjs,
-  "Google Cloud": SiGooglecloud,
-  AWS: SiAmazonwebservices,
-  Docker: SiDocker,
-  Webpack: SiWebpack,
-};
+import { SKILL_GROUPS } from "../constants";
 
 const Technologies = ({ isLightMode }) => {
   return (
@@ -42,36 +21,14 @@ const Technologies = ({ isLightMode }) => {
             isLightMode ? "text-slate-950" : "text-white"
           }`}
         >
-          Technologies & tools
+          A practical toolkit
         </h2>
         <p className={`mt-3 leading-7 ${isLightMode ? "text-slate-600" : "text-slate-300"}`}>
-          Skills grouped across customer-facing delivery, agentic AI, and engineering and cloud.
+          AI platforms and workflows, paired with the product and engineering foundations to put them to work.
         </p>
       </div>
 
-      <ul
-        aria-label="Core technologies"
-        className="mb-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6"
-      >
-        {FEATURED_TECHNOLOGIES.map((technology) => {
-          const Icon = TECHNOLOGY_ICONS[technology];
-          return (
-            <li
-              key={technology}
-              className={`flex min-h-24 flex-col items-center justify-center gap-2 rounded-xl border px-2 py-4 text-center ${
-                isLightMode
-                  ? "border-slate-200 bg-white text-slate-700 shadow-sm"
-                  : "border-white/10 bg-white/[0.03] text-slate-200"
-              }`}
-            >
-              <Icon aria-hidden="true" className="text-2xl text-cyan-500" />
-              <span className="text-xs font-medium sm:text-sm">{technology}</span>
-            </li>
-          );
-        })}
-      </ul>
-
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
         {SKILL_GROUPS.map((group) => (
           <article
             key={group.title}
@@ -92,10 +49,10 @@ const Technologies = ({ isLightMode }) => {
               {group.skills.map((skill) => (
                 <li
                   key={skill}
-                  className={`rounded-full px-3 py-1.5 text-xs font-medium sm:text-sm ${
+                  className={`rounded-lg border px-3 py-1.5 text-xs font-medium leading-5 sm:text-sm ${
                     isLightMode
-                      ? "bg-slate-100 text-slate-700"
-                      : "bg-slate-800 text-slate-200"
+                      ? "border-slate-200 bg-slate-50 text-slate-700"
+                      : "border-white/10 bg-slate-900/70 text-slate-200"
                   }`}
                 >
                   {skill}

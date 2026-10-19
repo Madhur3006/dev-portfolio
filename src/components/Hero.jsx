@@ -1,4 +1,3 @@
-import profilePic from "../assets/profilePhoto1.jpeg";
 import { HERO_CONTENT, HERO_ROLE, RESUME_PDF } from "../constants";
 
 const Hero = ({ isLightMode }) => {
@@ -14,18 +13,18 @@ const Hero = ({ isLightMode }) => {
             isLightMode ? "text-cyan-800" : "text-cyan-300"
           }`}
         >
-          Forward Deployed Engineer · React · TypeScript · Node.js · AI systems
+          Madhur Mangal · Forward Deployed Engineer
         </p>
         <h1
           id="hero-title"
-          className={`text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl ${
+          className={`max-w-3xl text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl ${
             isLightMode ? "text-slate-950" : "text-white"
           }`}
         >
-          Madhur Mangal
+          AI-driven software engineering
         </h1>
         <h2
-          className={`mt-4 max-w-2xl text-2xl font-medium leading-tight tracking-tight sm:text-3xl lg:text-4xl ${
+          className={`mt-5 max-w-2xl text-xl font-medium leading-tight tracking-tight sm:text-2xl lg:text-3xl ${
             isLightMode ? "text-slate-700" : "text-slate-200"
           }`}
         >
@@ -38,7 +37,7 @@ const Hero = ({ isLightMode }) => {
         >
           {HERO_CONTENT}
         </p>
-        <div className="mt-8 flex flex-wrap gap-3">
+        <div className="mt-7 flex flex-wrap gap-3">
           <a
             href="#projects"
             className={`inline-flex min-h-11 items-center justify-center rounded-lg px-5 py-3 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 ${
@@ -63,21 +62,15 @@ const Hero = ({ isLightMode }) => {
         </div>
       </div>
 
-      <div className="mx-auto w-full max-w-sm">
-        <div
-          className={`relative overflow-hidden rounded-3xl border p-2 shadow-2xl ${
-            isLightMode
-              ? "border-slate-200 bg-white shadow-slate-300/40"
-              : "border-white/10 bg-white/5 shadow-black/40"
+      <div className="mx-auto w-full max-w-sm [perspective:1100px]">
+        <img
+          src="/profile_image.jpg"
+          alt="Portrait of Madhur Mangal"
+          className={`mx-auto aspect-square w-full object-cover object-center [clip-path:circle(47%_at_50%_50%)] [transform:rotateY(-7deg)_rotateX(2deg)] [filter:drop-shadow(24px_30px_24px_rgba(0,0,0,0.42))] transition-transform duration-300 hover:[transform:rotateY(-2deg)_rotateX(0deg)_scale(1.02)] motion-reduce:transform-none motion-reduce:transition-none ${
+            isLightMode ? "[filter:drop-shadow(24px_30px_24px_rgba(15,23,42,0.2))]" : ""
           }`}
-        >
-          <img
-            src={profilePic}
-            alt="Portrait of Madhur Mangal"
-            className="aspect-[4/5] w-full rounded-2xl object-cover object-center"
-            fetchPriority="high"
-          />
-        </div>
+          fetchPriority="high"
+        />
       </div>
     </section>
   );

@@ -1,7 +1,5 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import About from "../components/About";
-import Technologies from "../components/Technologies";
 import Experience from "../components/Experience";
 import CertificationsAwards from "../components/CertificationsAwards";
 import Projects from "../components/Projects";
@@ -28,8 +26,6 @@ const Home = ({ isLightMode, setIsLightMode }) => {
 
       <main className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <Hero isLightMode={isLightMode} />
-        <About isLightMode={isLightMode} />
-        <Technologies isLightMode={isLightMode} />
         <Projects isLightMode={isLightMode} />
         <Experience isLightMode={isLightMode} />
         <CertificationsAwards isLightMode={isLightMode} />

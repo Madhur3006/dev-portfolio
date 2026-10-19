@@ -6,8 +6,6 @@ import logoLight from "../assets/logo_light.svg";
 import { RESUME_PDF } from "../constants";
 
 const SECTION_LINKS = [
-  { href: "#about", label: "About" },
-  { href: "#technologies", label: "Skills" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
   { href: "#credentials", label: "Credentials" },

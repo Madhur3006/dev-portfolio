@@ -1,4 +1,5 @@
 import { EXPERIENCES } from "../constants";
+import AgentEvaluationFocus from "./AgentEvaluationFocus";
 
 const Experience = ({ isLightMode }) => {
   return (
@@ -68,6 +69,9 @@ const Experience = ({ isLightMode }) => {
                 </ul>
               </div>
             </article>
+            {experience.company === "Innovaccer" && (
+              <AgentEvaluationFocus isLightMode={isLightMode} />
+            )}
           </li>
         ))}
       </ol>
