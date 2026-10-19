@@ -45,13 +45,13 @@ const Technologies = ({ isLightMode }) => {
           Technologies & tools
         </h2>
         <p className={`mt-3 leading-7 ${isLightMode ? "text-slate-600" : "text-slate-300"}`}>
-          Core technologies and the wider toolkit I use to build and ship web applications.
+          Engineering skills and product-facing AI capabilities from my current work.
         </p>
       </div>
 
       <ul
         aria-label="Core technologies"
-        className="mb-8 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-8"
+        className="mb-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6"
       >
         {FEATURED_TECHNOLOGIES.map((technology) => {
           const Icon = TECHNOLOGY_ICONS[technology];

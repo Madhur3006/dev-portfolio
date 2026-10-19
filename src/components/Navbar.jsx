@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { BiMenu, BiMoon, BiSun, BiX } from "react-icons/bi";
 import logoDark from "../assets/logo_dark.svg";
 import logoLight from "../assets/logo_light.svg";
+import { RESUME_PDF } from "../constants";
 
 const SECTION_LINKS = [
   { href: "#about", label: "About" },
@@ -68,14 +69,14 @@ const Navbar = ({ isLightMode, setIsLightMode }) => {
               {item.label}
             </a>
           ))}
-          <Link
-            to="/resume"
+          <a
+            href={RESUME_PDF}
             className={`${focusStyle} text-sm font-medium transition-colors hover:text-cyan-500 ${
               isLightMode ? "text-slate-600" : "text-slate-300"
             }`}
           >
             Résumé
-          </Link>
+          </a>
         </nav>
 
         <div className="flex shrink-0 items-center gap-2">
@@ -130,15 +131,15 @@ const Navbar = ({ isLightMode, setIsLightMode }) => {
                 {item.label}
               </a>
             ))}
-            <Link
-              to="/resume"
+            <a
+              href={RESUME_PDF}
               onClick={closeMenu}
               className={`${focusStyle} rounded-lg px-3 py-3 text-sm font-medium ${
                 isLightMode ? "text-slate-700 hover:bg-slate-100" : "text-slate-200 hover:bg-white/5"
               }`}
             >
               Résumé
-            </Link>
+            </a>
           </div>
         </nav>
       )}

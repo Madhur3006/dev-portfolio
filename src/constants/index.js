@@ -1,94 +1,61 @@
-import videoStreamingImage from "../assets/projects/project2.png";
-import conversationalImage from "../assets/projects/project-1.png";
+export const RESUME_PDF = "/Madhur_Mangal_Resume_FDE.pdf";
 
 export const NAVLINKS = {
   github: "https://github.com/Madhur3006",
-  linkedIn: "https://linkedin.com/in/madhur-mangal-a42b4821a",
+  linkedIn: "https://www.linkedin.com/in/madhur-mangal-a42b4821a",
   x: "https://x.com/madhurmangal4?s=11",
 };
 
 export const CONTACT = {
-  email: "Madhurmangal5@gmail.com",
+  email: "madhurmangal5@gmail.com",
+  phone: "+91 7773005204",
 };
 
 export const EDUCATION = {
   institution: "The LNM Institute of Information Technology",
   location: "Jaipur",
-  degree: "Bachelor of Engineering in Computer Science and Engineering",
-  dates: "2018 – 2022",
+  degree: "B.Tech, Computer Science and Engineering",
+  dates: "2018–2022",
 };
 
-export const CERTIFICATIONS = [
-  "Web Development — Kodebay",
-  "Namaste JavaScript — Akshay Saini",
-  "Namaste React — Akshay Saini",
-  "Namaste Node — Akshay Saini",
-  "Azure Fundamentals (AZ-900)",
-  "AWS Cloud Practitioner",
-];
-
-export const AWARDS = [
-  "Spot Award — Innovaccer UI framework adoption",
-  "Delivery Ninja Award — Walmart partnership delivery at CommerceIQ",
-];
-
-export const HERO_ROLE = "Software Development Engineer";
+export const HERO_ROLE = "Forward Deployed Engineer";
 
 export const HERO_CONTENT =
-  "Frontend-focused full-stack engineer with 4+ years of experience building scalable web applications across healthcare, retail, and cloud platforms. I focus on React, TypeScript, micro-frontends, accessibility, and performance.";
+  "Forward Deployed Engineer and frontend-focused full-stack engineer with 4+ years of experience delivering customer-facing products across healthcare, cloud data, and retail. Combines React, TypeScript, Node.js, accessibility, product validation, and AI-enabled workflows to translate product and customer needs into production software.";
 
 export const ABOUT_TEXT =
-  "I build scalable web applications across healthcare, retail, and cloud platforms. My work spans frontend architecture and full-stack delivery, with a focus on accessible, performant experiences using React, TypeScript, and micro-frontends.";
+  "I deliver customer-facing products across healthcare, cloud data, and retail, combining React, TypeScript, and Node.js with accessibility, product validation, and AI-enabled workflows to translate product and customer needs into production software.";
 
 export const SKILL_GROUPS = [
   {
-    title: "Frontend & architecture",
+    title: "Engineering",
     skills: [
       "React",
       "TypeScript",
-      "JavaScript (ES6+)",
-      "Vue.js",
-      "React Native",
+      "JavaScript",
+      "Node.js",
+      "Express",
       "Redux",
-      "React Router",
-      "Micro-frontends",
+      "REST APIs",
+      "GraphQL",
       "Module Federation",
       "Webpack",
-      "HTML5",
-      "CSS / Sass",
-      "Tailwind CSS",
-      "Responsive design",
-    ],
-  },
-  {
-    title: "Backend & APIs",
-    skills: ["Node.js", "Express.js", "REST APIs", "GraphQL", "Python"],
-  },
-  {
-    title: "Accessibility & quality",
-    skills: [
-      "WCAG 2.2 accessibility",
-      "Performance optimization",
-      "Jest",
-      "React Testing Library",
-      "Unit testing",
-      "Code reviews",
-    ],
-  },
-  {
-    title: "Cloud & delivery",
-    skills: [
-      "Google Cloud",
       "AWS",
-      "Docker",
-      "Git",
-      "Jenkins",
       "CI/CD",
-      "npm / Yarn",
-      "Jira",
-      "Agile / Scrum",
-      "Claude Code",
-      "Cursor",
+    ],
+  },
+  {
+    title: "Product & AI",
+    skills: [
+      "WCAG accessibility",
+      "Validation frameworks",
+      "Customer reporting",
+      "Agent creation & orchestration",
+      "Agent skills & plugins",
+      "MCP",
+      "Claude Cowork",
+      "Hugging Face",
+      "Mastra.ai",
     ],
   },
 ];
@@ -98,73 +65,73 @@ export const FEATURED_TECHNOLOGIES = [
   "TypeScript",
   "JavaScript",
   "Node.js",
-  "Google Cloud",
   "AWS",
-  "Docker",
   "Webpack",
 ];
 
 export const EXPERIENCES = [
   {
-    year: "Sep 2025 – Present",
-    role: "Software Development Engineer 1",
+    year: "Sep 2025–Present",
+    role: "Forward Deployed Engineer (FDE) / Software Development Engineer I",
     company: "Innovaccer",
+    location: "Noida, India",
     description: [
-      "Drive development of P360, a patient platform for clinical data workflows, and frontend architecture for a Module Federation micro-frontend system with independently deployable features.",
-      "Led a WCAG 2.2 audit across 4 repositories covering 273 issues; resolved 52% through automated fixes and a structured sprint plan.",
-      "Built a reusable React file preview for PDF, DOCX, XLSX, images, video, and audio, removing third-party viewer dependencies.",
-      "Resolved performance bottlenecks and memory leaks in patient-data views; used AI-assisted tools to speed debugging and code review.",
+      "Build and scale P360, a patient platform supporting critical healthcare data workflows across provider organizations.",
+      "Develop an accessibility-as-a-service capability with practical implementation guidance, product-boundary checks, persistent error logs, and reusable review practices for accessibility engineering.",
+      "Create a product testing and validation framework that uses observed results and feedback to iteratively improve coverage and validation quality.",
+      "Build customer SLA reporting workflows with an agent that prepares reports and supports follow-up, helping reduce manual reporting effort and improve SLA visibility.",
+      "Contribute to a Module Federation architecture for independently deployable micro-frontends; audited four repositories and resolved 52% of 273 WCAG 2.2 issues.",
+      "Address performance bottlenecks and memory leaks in patient data views; built a reusable React preview component for documents, images, video, and audio.",
     ],
   },
   {
-    year: "Jan 2025 – Sep 2025",
-    role: "Fullstack Software Engineer",
+    year: "Jan 2025–Sep 2025",
+    role: "Fullstack Software Engineer, Google Dataplex",
     company: "CloudSufi",
+    location: "Remote, India",
     description: [
-      "Led frontend delivery of Google Dataplex from the ground up to a production-ready application.",
-      "Built a Node.js middleware layer for REST orchestration, authentication, and data transformation with Google Cloud services.",
-      "Worked directly with Google product, UX, and technical stakeholders; mentored junior engineers on architecture and code quality.",
+      "Built Google Dataplex, a data governance and management product, from the ground up as lead frontend engineer in collaboration with Google product, UX, and technical stakeholders.",
+      "Architected Node.js middleware for REST API orchestration, authentication, and data transformation between the application and Google Cloud services.",
     ],
   },
   {
-    year: "Aug 2023 – Jan 2025",
+    year: "Aug 2023–Jan 2025",
     role: "Software Development Engineer UI",
     company: "CommerceIQ",
+    location: "Bengaluru, India",
     description: [
-      "Spearheaded advertising campaign management for Walmart and Target, contributing to an 80% contract renewal rate.",
-      "Designed and delivered Amazon and Walmart campaign creation features associated with 120% customer-base expansion.",
-      "Received the Delivery Ninja Award for delivery of a product pivotal to CommerceIQ’s Walmart ad-tech partnership; conducted code reviews to support maintainability.",
+      "Led advertising campaign management for Walmart and Target, contributing to an 80% contract renewal rate; delivered Amazon and Walmart campaign creation features supporting 120% customer-base expansion.",
+      "Earned the Delivery Ninja Award for delivery supporting CommerceIQ’s Walmart ad-tech partnership.",
     ],
   },
   {
-    year: "Jan 2022 – Jul 2023",
+    year: "Jan 2022–Jul 2023",
     role: "Associate II Software Engineer",
     company: "Capgemini Engineering",
+    location: "Gurugram, India",
     description: [
-      "Developed IBM Spectrum Scale GUI for managing enterprise file and object storage.",
-      "Integrated Fluent UI and led migration of 70% of the codebase from Dojo to React; reached 80% code coverage with Jest and React Testing Library.",
-      "Built a backup state-management library with pause and resume controls, improving backup performance by 2×.",
+      "Migrated 70% of IBM Spectrum Scale GUI from Dojo to React and integrated FluentUI; built pause/resume backup state management that delivered a 2× performance improvement.",
     ],
   },
 ];
 
 export const PROJECTS = [
   {
-    title: "Video Streaming Platform",
-    image: videoStreamingImage,
+    title: "Problem-to-Agentic Solution Sandbox Hiring Platform",
+    status: "In progress; deployment link forthcoming",
     description:
-      "Live video streaming app with Redux state management for streams, user interactions, and authentication.",
-    technologies: ["React", "Redux", "YouTube Live API"],
-    liveLink: "https://stupendous-haupia-936c4c.netlify.app/",
-    githubLink: "https://github.com/Madhur3006/Video-Streaming-Youtube",
+      "A hands-on hiring platform where candidates turn real problems into agentic solutions, bridging AI fundamentals with practical agent building.",
   },
   {
-    title: "AI Conversational Platform",
-    image: conversationalImage,
+    title: "Investment Market Macro-Factor Model",
+    status: "In progress; deployment link forthcoming",
     description:
-      "Conversational AI platform with live Gemini API integration, parallel chat threads, and Redux-managed authentication and chat history.",
-    technologies: ["React", "Redux", "Google Gemini API"],
-    liveLink: "https://gemini-clone-ochre-ten.vercel.app/",
-    githubLink: "https://github.com/Madhur3006/Gemini-clone",
+      "Analyzes macro factors using supplied market data and iteratively refines outputs through MCP-connected workflows informed by investor input.",
+  },
+  {
+    title: "Agentic Council Framework",
+    liveLink: "https://cognitive-branching-tool--awasthisubodhon.replit.app/",
+    description:
+      "Explores a multi-agent council that gathers and synthesizes perspectives into a response, inspired by Perplexity’s Council feature.",
   },
 ];

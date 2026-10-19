@@ -30,19 +30,32 @@ const Contact = ({ isLightMode }) => {
           Let’s connect
         </h2>
         <p className={`mx-auto mt-3 max-w-lg leading-7 ${isLightMode ? "text-slate-600" : "text-slate-300"}`}>
-          For questions or opportunities, reach out by email.
+          For questions or opportunities, reach out by email or phone.
         </p>
-        <a
-          href={`mailto:${CONTACT.email}`}
-          aria-label="Email Madhur Mangal"
-          className={`mt-6 inline-flex min-h-11 items-center justify-center rounded-lg px-5 py-3 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 ${
-            isLightMode
-              ? "bg-cyan-800 text-white hover:bg-cyan-900 focus-visible:ring-offset-slate-50"
-              : "bg-cyan-300 text-slate-950 hover:bg-cyan-200 focus-visible:ring-offset-neutral-950"
-          }`}
-        >
-          {CONTACT.email}
-        </a>
+        <div className="mt-6 flex flex-wrap justify-center gap-3">
+          <a
+            href={`mailto:${CONTACT.email}`}
+            aria-label="Email Madhur Mangal"
+            className={`inline-flex min-h-11 items-center justify-center rounded-lg px-5 py-3 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 ${
+              isLightMode
+                ? "bg-cyan-800 text-white hover:bg-cyan-900 focus-visible:ring-offset-slate-50"
+                : "bg-cyan-300 text-slate-950 hover:bg-cyan-200 focus-visible:ring-offset-neutral-950"
+            }`}
+          >
+            {CONTACT.email}
+          </a>
+          <a
+            href={`tel:${CONTACT.phone.replace(/\s/g, "")}`}
+            aria-label={`Call Madhur Mangal at ${CONTACT.phone}`}
+            className={`inline-flex min-h-11 items-center justify-center rounded-lg border px-5 py-3 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 ${
+              isLightMode
+                ? "border-slate-300 text-slate-800 hover:bg-slate-100 focus-visible:ring-offset-slate-50"
+                : "border-slate-600 text-slate-100 hover:bg-white/5 focus-visible:ring-offset-neutral-950"
+            }`}
+          >
+            {CONTACT.phone}
+          </a>
+        </div>
       </div>
     </section>
   );

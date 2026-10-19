@@ -55,7 +55,7 @@ const Experience = ({ isLightMode }) => {
                     isLightMode ? "text-slate-600" : "text-slate-300"
                   }`}
                 >
-                  {experience.company}
+                  {experience.company} · {experience.location}
                 </p>
                 <ul
                   className={`mt-4 list-disc space-y-2 pl-5 leading-7 marker:text-cyan-500 ${

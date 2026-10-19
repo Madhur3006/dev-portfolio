@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
 import profilePic from "../assets/profilePhoto1.jpeg";
-import { HERO_CONTENT, HERO_ROLE } from "../constants";
+import { HERO_CONTENT, HERO_ROLE, RESUME_PDF } from "../constants";
 
 const Hero = ({ isLightMode }) => {
   return (
@@ -15,7 +14,7 @@ const Hero = ({ isLightMode }) => {
             isLightMode ? "text-cyan-800" : "text-cyan-300"
           }`}
         >
-          Frontend-focused full-stack engineer · 4+ years
+          Forward Deployed Engineer · React · TypeScript · Node.js · AI systems
         </p>
         <h1
           id="hero-title"
@@ -50,8 +49,9 @@ const Hero = ({ isLightMode }) => {
           >
             View Projects
           </a>
-          <Link
-            to="/resume"
+          <a
+            href={RESUME_PDF}
+            aria-label="View the latest résumé PDF"
             className={`inline-flex min-h-11 items-center justify-center rounded-lg border px-5 py-3 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 ${
               isLightMode
                 ? "border-slate-300 text-slate-800 hover:border-slate-500 hover:bg-slate-100 focus-visible:ring-offset-white"
@@ -59,7 +59,7 @@ const Hero = ({ isLightMode }) => {
             }`}
           >
             View Résumé
-          </Link>
+          </a>
         </div>
       </div>
 
